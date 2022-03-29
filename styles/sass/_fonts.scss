@@ -9,16 +9,14 @@
 
 h1 {
     @include fontSize(6rem);
-    color: $primary;
+    color: $accent;
     span {
-        color: #fff;
+        color: $fontColor;
     }
 }
 
 h2 {
     @include fontSize(3rem);
-    color: #fff;
-    text-align: center;
 }
 
 h3 {
@@ -27,6 +25,5 @@ h3 {
 
 p {
     @include fontSize(2rem);
-    color: #fff;
 }
 

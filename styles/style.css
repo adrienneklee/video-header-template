@@ -252,6 +252,16 @@ section {
   padding: 4% 0;
 }
 
+a {
+  text-decoration: none;
+  color: #fff;
+  font-size: "Work Sans", sans-serif;
+}
+
+a:hover {
+  color: #015B7F;
+}
+
 img {
   width: 100%;
   display: block;
@@ -259,6 +269,7 @@ img {
 
 main {
   margin-top: -70px;
+  /* Compensate for horizontal lines */
 }
 
 .flex {
@@ -280,52 +291,9 @@ main {
           justify-content: center;
 }
 
-.wrapper {
-  max-width: 1200px;
-  width: 60%;
-  margin: 0 auto;
-  -webkit-transform: skewY(10deg);
-          transform: skewY(10deg);
-}
-
-.content {
-  padding: 100px 0;
-  border-top: 5px solid white;
-}
-
-.diagonal-box {
-  -webkit-transform: skewY(-10deg);
-          transform: skewY(-10deg);
-}
-
-.issue-1 {
-  background-image: linear-gradient(45deg, #4588A3, #221F3F);
-}
-
-.issue-2 {
-  background-image: linear-gradient(45deg, #015B7F, #221F3F);
-}
-
-.issue-3 {
-  background-image: linear-gradient(45deg, #094261, #221F3F);
-}
-
-.issue-4 {
-  background-color: #221F3F;
-}
-.issue-4 a {
-  margin: 50px 0;
-}
-
-footer {
-  margin-bottom: 0;
-  background-color: #000;
-  position: relative;
-}
-
 h1 {
   font-size: 6rem;
-  color: #000;
+  color: #fff;
   font-family: "Open Sans", sans-serif;
   line-height: 140%;
   letter-spacing: 1px;
@@ -338,18 +306,16 @@ h1 span {
 
 h2 {
   font-size: 3rem;
-  color: #000;
+  color: #fff;
   font-family: "Open Sans", sans-serif;
   line-height: 140%;
   letter-spacing: 1px;
-  text-align: center;
-  color: #fff;
   text-align: center;
 }
 
 h3 {
   font-size: 2.5rem;
-  color: #000;
+  color: #fff;
   font-family: "Open Sans", sans-serif;
   line-height: 140%;
   letter-spacing: 1px;
@@ -358,20 +324,66 @@ h3 {
 
 p {
   font-size: 2rem;
-  color: #000;
+  color: #fff;
   font-family: "Open Sans", sans-serif;
   line-height: 140%;
   letter-spacing: 1px;
   text-align: center;
+}
+
+h1 {
+  font-size: 6rem;
   color: #fff;
+  font-family: "Open Sans", sans-serif;
+  line-height: 140%;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #dedc7c;
+}
+h1 span {
+  color: #fff;
+}
+
+h2 {
+  font-size: 3rem;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  line-height: 140%;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 2.5rem;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  line-height: 140%;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+p {
+  font-size: 2rem;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  line-height: 140%;
+  letter-spacing: 1px;
+  text-align: center;
 }
 
 .bg-video-wrap {
   position: relative;
+  bottom: 0;
+  left: 0;
   width: 100%;
   height: 70vh;
+  margin-bottom: -50px;
   -webkit-transform: skewY(10deg);
           transform: skewY(10deg);
+  background-image: url("../assets/robin.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 video {
@@ -383,30 +395,31 @@ video {
 .overlay-head {
   width: 100%;
   height: 100vh;
-  /* Adding negative margin to compensate for uncovered space - otherwise 70VH */
+  /* 70 - 100vh to cover horizontal skew 10deg */
   position: absolute;
   top: 0;
   left: 0;
   background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.7) 50%);
   background-size: 3px 3px;
   z-index: 2;
-  margin-top: -150px;
-  /* Adding negative margin to compensate for uncovered space - otherwise remove */
+  margin-top: -170px;
+  /* Remove if no horizontal skew */
 }
 
 .title-card {
   height: 100vh;
-  /* Adding negative margin to compensate for uncovered space - otherwise 70VH */
+  /* 70 - 100vh to cover horizontal skew */
   -webkit-transform: skewY(10deg);
           transform: skewY(10deg);
 }
 
 article {
-  top: 35px;
-  width: 100%;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
   position: relative;
+  top: 35px;
+  /* Top positioning for Desktop */
+  width: 100%;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
   z-index: 999;
 }
 
@@ -418,15 +431,63 @@ body.fixed article {
 
 .btn {
   background-color: #dedc7c;
-  color: #000;
   font-size: 2.5rem;
-  font-weight: bold;
-  text-decoration: none;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  line-height: 140%;
+  letter-spacing: 1px;
   text-align: center;
+  color: #000;
+  font-weight: bold;
   padding: 10px 40px;
   -ms-flex-item-align: center;
       align-self: center;
-  margin: 10px 0;
+  border: none;
+}
+
+@media (max-width: 1024px) {
+  video {
+    visibility: hidden;
+  }
+}
+h1 {
+  font-size: 6rem;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  line-height: 140%;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #dedc7c;
+}
+h1 span {
+  color: #fff;
+}
+
+h2 {
+  font-size: 3rem;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  line-height: 140%;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 2.5rem;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  line-height: 140%;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+p {
+  font-size: 2rem;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  line-height: 140%;
+  letter-spacing: 1px;
+  text-align: center;
 }
 
 .video-modal,
@@ -478,35 +539,11 @@ body.fixed article {
   overflow-y: visible;
   background: #000;
   width: calc(100% - 12em);
-  height: 0;
+  height: 100%;
   padding-top: calc((100% - 12em) * 0.5625);
   /* 16:9 calc */
 }
-.video-modal-content .social-btn {
-  background-color: #000;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  padding: 40px 20px;
-}
 
-h3 {
-  color: #fff;
-  text-align: left;
-  display: block;
-}
-
-/* Scaling to fit within the current Viewport size:
-   When viewport aspect ratio is greater than 16:9
-   work off the height instead of the width for calc */
-/* Mobile Layout Tweaks - side margins reduced */
-@media (max-width: 640px) {
-  .video-modal-content {
-    width: calc(100% - 1em);
-    padding-top: calc((100% - 1em) * 0.5625);
-    /* 16:9 calc */
-  }
-}
 /* modal close button */
 .close-video-modal {
   display: block;
@@ -531,6 +568,45 @@ iframe#youtube {
           box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.5);
 }
 
+.social-btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background: #000;
+}
+.social-btn h3 {
+  text-align: left;
+  font-size: 2rem;
+  margin-left: 5px;
+}
+
+/* Scaling to fit within the current Viewport size:
+When viewport aspect ratio is greater than 16:9 work off the height instead of the width for calc */
+/* Mobile Layout Tweaks - side margins reduced */
+@media (max-width: 900px) {
+  .video-modal-content {
+    width: calc(100% - 5em);
+    padding-top: calc((100% - 5em) * 0.5625);
+    /* 16:9 calc */
+  }
+  .video-modal-content .close-video-modal {
+    top: -25px;
+  }
+}
+/* Mobile Layout Tweaks - side margins reduced */
+@media (max-width: 640px) {
+  .video-modal-content {
+    width: calc(100% - 1em);
+    padding-top: calc((100% - 1em) * 0.5625);
+    /* 16:9 calc */
+  }
+  .video-modal-content .close-video-modal {
+    top: 0;
+    z-index: 2;
+  }
+}
 /* show the modal: add class to the body to reveal */
 .show-video-modal .video-modal {
   opacity: 1;
@@ -553,6 +629,7 @@ iframe#youtube {
   width: 200px;
   display: inline-block;
   padding: 8px 30px;
+  margin: 5px;
 }
 
 .FB {
@@ -567,7 +644,93 @@ iframe#youtube {
   background-color: #0B65C2;
 }
 
-.Copy {
+.Copy, .Email {
   background-color: #fff;
   color: #000;
+}
+
+h1 {
+  font-size: 6rem;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  line-height: 140%;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #dedc7c;
+}
+h1 span {
+  color: #fff;
+}
+
+h2 {
+  font-size: 3rem;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  line-height: 140%;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 2.5rem;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  line-height: 140%;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+p {
+  font-size: 2rem;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  line-height: 140%;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.wrapper {
+  max-width: 1200px;
+  width: 60%;
+  margin: 0 auto;
+  -webkit-transform: skewY(10deg);
+          transform: skewY(10deg);
+}
+
+.content {
+  padding: 100px 0;
+  border-top: 5px solid white;
+}
+
+.diagonal-box {
+  -webkit-transform: skewY(-10deg);
+          transform: skewY(-10deg);
+}
+
+.issue-1 {
+  background-image: linear-gradient(45deg, #4588A3, #000);
+}
+
+.issue-2 {
+  background-image: linear-gradient(45deg, #015B7F, #000);
+}
+
+.issue-3 {
+  background-image: linear-gradient(45deg, #094261, #000);
+}
+
+.issue-4 {
+  background-image: linear-gradient(45deg, #221F3F, #000);
+}
+
+.issue-5 {
+  background-color: #000;
+}
+.issue-5 a {
+  margin: 50px 0;
+}
+
+.footer-text p {
+  margin: 20px;
+  font-size: 1.4rem;
 }

@@ -1,3 +1,6 @@
+@import 'colorPalette';
+@import 'fonts';
+
 // Modal Styles
 .video-modal,
 .video-modal .overlay {
@@ -11,10 +14,9 @@
 .video-modal {
     overflow: hidden;
     position: fixed;
-    opacity: 0.0;
+    opacity: 0;
     transform: translate(500%, 0%);
     transition: transform 0s linear 0s;
-
     display: flex;
     align-items: center;
     transform-style: preserve-3d;
@@ -22,7 +24,7 @@
 .video-modal .overlay {
     z-index: 0;
     background-color: rgba(27, 23, 43, 0.82);
-    opacity: 0.0;
+    opacity: 0;
     transition: opacity 0.2s ease-out 0.05s;
 }
 
@@ -33,48 +35,12 @@
     bottom: auto;
     left: auto;
     z-index: 1;
-
     margin: 0 auto;
-
     overflow-y: visible;
-
     background: #000;
-
     width: calc(100% - 12em);
-    height: 0;
+    height: 100%;
     padding-top: calc((100% - 12em) * 0.5625); /* 16:9 calc */
-    .social-btn{
-        background-color: #000;
-        height: fit-content;
-        padding: 40px 20px;
-    }
-}
-
-h3{
-    color: #fff;
-    text-align: left;
-    display: block;
-}
-
-/* Scaling to fit within the current Viewport size:
-   When viewport aspect ratio is greater than 16:9
-   work off the height instead of the width for calc */
-//  @media (min-aspect-ratio: 16/9) {
-//   .video-modal-content {
-//     width: 0;
-//     height: calc(100vh - 10em);
-//     padding-top: 0;
-//     padding-left: calc((100vh - 10em) * 1.7778);
-//      /* 16:9 calc */
-//   }
-// }
-
-/* Mobile Layout Tweaks - side margins reduced */
-@media (max-width: 640px) {
-	.video-modal-content {
-		width: calc(100% - 1em);
-    padding-top: calc((100% - 1em) * 0.5625); /* 16:9 calc */
-	}
 }
 
 /* modal close button */
@@ -96,16 +62,63 @@ iframe#youtube {
 	bottom: 0;
 	left: 0;
 	z-index: 1;
-
 	background: #000;
 	box-shadow: 0px 2px 16px rgba(0,0,0,0.5);
 }
 
+.social-btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background: #000;
+    h3 {
+        text-align: left;
+        font-size: 2rem;
+        margin-left: 5px;
+    }
+}
+
+
+/* Scaling to fit within the current Viewport size:
+When viewport aspect ratio is greater than 16:9 work off the height instead of the width for calc */
+//  @media (min-aspect-ratio: 16/9) {
+//   .video-modal-content {
+//     width: 0;
+//     height: calc(100vh - 10em);
+//     padding-top: 0;
+//     padding-left: calc((100vh - 10em) * 1.7778);
+//      /* 16:9 calc */
+//   }
+// }
+
+/* Mobile Layout Tweaks - side margins reduced */
+@media (max-width: 900px) {
+	.video-modal-content {
+		width: calc(100% - 5em);
+        padding-top: calc((100% - 5em) * 0.5625); /* 16:9 calc */
+        .close-video-modal {
+            top: -25px;
+        }
+	}
+}
+
+/* Mobile Layout Tweaks - side margins reduced */
+@media (max-width: 640px) {
+	.video-modal-content {
+		width: calc(100% - 1em);
+        padding-top: calc((100% - 1em) * 0.5625); /* 16:9 calc */
+        .close-video-modal {
+            top: 0;
+            z-index: 2;
+        }
+	}
+}
 
 /* show the modal: add class to the body to reveal */
 .show-video-modal .video-modal {
 	opacity: 1.0;
-
 	transform: translate(0%,0%);
 	-webkit-transform: translate(0%,0%);
 }
@@ -117,7 +130,7 @@ iframe#youtube {
 	-webkit-transform: translate(0%,0%);
 }
 
-// Share buttons
+// SHARE BUTTONS
 
 .FB, .TW, .LI, .Copy, .Email {
 color: #fff;
@@ -125,7 +138,7 @@ font-size: smaller;
 width: 200px;
 display: inline-block;
 padding: 8px 30px;
-
+margin: 5px;
 }
 
 .FB {
@@ -140,7 +153,7 @@ padding: 8px 30px;
     background-color: #0B65C2;
 }
 
-.Copy {
+.Copy, .Email {
     background-color: #fff;
     color: #000;
 }
