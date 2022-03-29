@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Modal Popup</title>
+    <!-- Link to Font Awesome -->
+    <script src="https://kit.fontawesome.com/d52e43a2f0.js" crossorigin="anonymous"></script>
+    <!-- Link to Style Sheet -->
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <header class="diagonal-box">
+        <div class="bg-video-wrap">
+            <video src="./assets/Robin.mp4" loop muted autoplay>
+            </video>
+        </div>
+
+        <div class="overlay-head">
+            <div class="title-card flex-column">
+                <h1>TITLE <span>TITLE</span></h1>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+        </div>
+    </header>
+
+    
+    <main>
+        <article class="flex-column" id="main-btn">
+            <a class="btn js-trigger-video-modal" data-src="https://www.youtube.com/embed/LJLUcSHzUp0"
+                data-youtube-id="LJLUcSHzUp0">
+                WATCH AND SHARE
+            </a>
+        </article>
+
+        <section class="content issue-1 diagonal-box" id="issues">
+            <div class="wrapper">
+                <h2>SUBTITLE</h2>
+                <p>Lorem ipsum dolor sit amet. Et illo nisi aut quia distinctio ea ipsam impedit non consequuntur repellendus ut natus laborum ea molestias deserunt et repudiandae omnis. Id alias beatae qui veritatis inventore est neque enim eumvoluptates galisum? Eum sunt inventore est autem doloremque qui veniam fugit et tempora voluptates est earum est rerum delectus. Ut optio
+                quisquam est similique aperiam non quis animi.</p>
+            </div>
+        </section>
+
+        <section class="content issue-2 diagonal-box">
+            <div class="wrapper">
+                <h2>SUBTITLE</h2>
+                <p>Lorem ipsum dolor sit amet. Et illo nisi aut quia distinctio ea ipsam impedit non consequuntur repellendus ut natus laborum ea molestias deserunt et repudiandae omnis. Id alias beatae qui veritatis inventore est neque enim eumvoluptates galisum? Eum sunt inventore est autem doloremque qui veniam fugit et tempora voluptates est earum est rerum delectus. Ut optio
+                quisquam est similique aperiam non quis animi.</p>
+            </div>
+        </section>
+
+        <section class="content issue-3 diagonal-box">
+            <div class="wrapper">
+                <h2>SUBTITLE</h2>
+                <p>Lorem ipsum dolor sit amet. Et illo nisi aut quia distinctio ea ipsam impedit non consequuntur repellendus ut natus laborum ea molestias deserunt et repudiandae omnis. Id alias beatae qui veritatis inventore est neque enim eumvoluptates galisum? Eum sunt inventore est autem doloremque qui veniam fugit et tempora voluptates est earum est rerum delectus. Ut optio
+                quisquam est similique aperiam non quis animi.</p>
+            </div>
+        </section>
+
+        <section class="content issue-4 diagonal-box">
+            <div class="wrapper flex-column">
+                <h2>SUBTITLE</h2>
+                <p>Lorem ipsum dolor sit amet. Et illo nisi aut quia distinctio ea ipsam impedit non consequuntur repellendus ut natus laborum ea molestias deserunt et  epudiandae omnis. Id alias beatae qui veritatis inventore est neque enim  eumvoluptates galisum? Eum sunt inventore est autem doloremque qui veniam fugit et tempora voluptates est earum est rerum delectus. Ut optio
+                quisquam est similique aperiam non quis animi.</p>
+                <a class="btn" href="#issues">Scroll to top</a>
+            </div>
+        </section>
+
+    <!-- Video Modal -->
+
+        <section class="video-modal">
+            <!-- Modal Content Wrapper -->
+            <div id="video-modal-content" class="video-modal-content flex-column">
+
+                <!-- iframe -->
+                <iframe
+                id="youtube"
+                src="" 
+                width="100%"
+                height="90%"
+                frameborder="0"
+                allow="autoplay"
+                allowfullscreen=""
+                allowscriptaccess="always"
+                >
+                <p>TEST</p>
+                </iframe>
+
+                <div class="social-btn">
+                    <h3>Share this video:</h3>
+                    <a href="https://www.facebook.com/" class="FB btn"><i class="fa-brands fa-facebook-f"></i></i> FACEBOOK</a>
+                
+                    <a href="https://twitter.com/" class="TW btn"><i class="fa-brands fa-twitter"></i> TWITTER</a>
+                
+                    <a href="" class="LI btn"><i class="fa-brands fa-linkedin"></i> LINKEDIN</a>
+                
+                    <a href="" class="Copy btn"><i class="fa-solid fa-copy"></i> COPY LINK</a>
+                
+                    <a href="" class="Email btn"><i class="fa-solid fa-envelope"></i> EMAIL</a>
+                </div>
+
+                <a 
+                    href="#"
+                    class="close-video-modal"
+                >
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0"
+                        viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve" width="24" height="24">
+
+                        <g id="icon-x-close">
+                            <path fill="#ffffff"
+                                d="M30.3448276,31.4576271 C29.9059965,31.4572473 29.4852797,31.2855701 29.1751724,30.980339 L0.485517241,2.77694915 C-0.122171278,2.13584324 -0.104240278,1.13679247 0.52607603,0.517159487 C1.15639234,-0.102473494 2.17266813,-0.120100579 2.82482759,0.477288136 L31.5144828,28.680678 C31.9872448,29.1460053 32.1285698,29.8453523 31.8726333,30.4529866 C31.6166968,31.0606209 31.0138299,31.4570487 30.3448276,31.4576271 Z"
+                                id="Shape"></path>
+                            <path fill="#ffffff"
+                                d="M1.65517241,31.4576271 C0.986170142,31.4570487 0.383303157,31.0606209 0.127366673,30.4529866 C-0.12856981,29.8453523 0.0127551942,29.1460053 0.485517241,28.680678 L29.1751724,0.477288136 C29.8273319,-0.120100579 30.8436077,-0.102473494 31.473924,0.517159487 C32.1042403,1.13679247 32.1221713,2.13584324 31.5144828,2.77694915 L2.82482759,30.980339 C2.51472031,31.2855701 2.09400353,31.4572473 1.65517241,31.4576271 Z"
+                                id="Shape"></path>
+                        </g>
+
+                    </svg>
+                </a>
+            </div> <!-- end modal content wrapper -->
+        
+            <div class="overlay"></div>
+        </section>
+        <!-- end of video modal -->
+    
+
+    </main>
+
+    <footer class="diagonal-box">
+        <div class="wrapper footer-text">
+            <!-- <p>Authorized by Point Blank Creative</p>
+            <p>416-763-2367</p> -->
+        </div>
+    </footer>
+
+<!-- link to jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>

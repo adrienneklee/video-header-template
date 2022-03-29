@@ -1,0 +1,32 @@
+@mixin fontSize ($sizeValue) {
+    font-size: $sizeValue;
+    color: $fontColor;
+    font-family: "Open Sans", sans-serif;
+    line-height: 140%;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+h1 {
+    @include fontSize(6rem);
+    color: $primary;
+    span {
+        color: #fff;
+    }
+}
+
+h2 {
+    @include fontSize(3rem);
+    color: #fff;
+    text-align: center;
+}
+
+h3 {
+    @include fontSize(2.5rem);
+}
+
+p {
+    @include fontSize(2rem);
+    color: #fff;
+}
+
