@@ -458,6 +458,11 @@ body.fixed article {
     visibility: hidden;
   }
 }
+@media (max-width: 640px) {
+  article {
+    top: 80%;
+  }
+}
 h1 {
   font-size: 6rem;
   color: #fff;
