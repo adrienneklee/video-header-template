@@ -258,8 +258,9 @@ a {
   font-size: "Work Sans", sans-serif;
 }
 
-a:hover {
-  color: #015B7F;
+a:hover,
+a:focus {
+  color: #fff;
 }
 
 img {
@@ -443,6 +444,13 @@ body.fixed article {
   -ms-flex-item-align: center;
       align-self: center;
   border: none;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #000;
+  color: #dedc7c;
+  border: 2px solid #dedc7c;
 }
 
 @media (max-width: 1024px) {
@@ -733,4 +741,16 @@ p {
 .footer-text p {
   margin: 20px;
   font-size: 1.4rem;
+}
+
+.skip-link {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  z-index: 999;
+  color: #fff;
+}
+
+.skip-link:focus {
+  left: 0;
 }

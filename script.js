@@ -10,7 +10,7 @@ $(document).ready(function() {
             const related_no = "&rel=0";
             const src = "https://www.youtube.com/embed/"+id+autoplay+related_no;
 
-            console.log(src);
+            // console.log(src);
 
             $("#youtube").attr("src", src);
 
@@ -34,11 +34,8 @@ $(document).ready(function() {
                 close_video_modal();
             }
         });
-
     }
     toggle_video_modal();
-
-
 });
 
 const article = document.querySelector("#main-btn");
@@ -57,3 +54,16 @@ function fixButton() {
 window.addEventListener('scroll', fixButton);
 
 
+// Dynamic Reorder
+// let wrapper = document.querySelector('.content-wrapper');
+// let children = wrapper.children;
+// let newOrder = [4, 3, 2, 1, 0];
+
+// for (let i=0; i<new.Order.length; i++) {
+//     for (let j=0; j<newOrder.length; j++) {
+//         if (i==newOrder[j]) {
+//             wrapper.appendChild(children[j]);
+//             break;
+//         }
+//     }
+// }

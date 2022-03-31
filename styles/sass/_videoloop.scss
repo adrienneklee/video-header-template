@@ -62,10 +62,21 @@ body.fixed article {
     border: none;
 }
 
+.btn:hover,
+.btn:focus {
+    background-color: $fifthColor;
+    color: $accent;
+    border: 2px solid $accent;
+}
+
 @media (max-width: 1024px) {
     video {
         visibility: hidden;
     }
 }
 
-
+@media (max-width: 640px) {
+    article {
+        top: 80%;
+    }
+}
